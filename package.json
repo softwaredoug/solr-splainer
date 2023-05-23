@@ -5,11 +5,9 @@
   "app": "app",
   "dist": "dist",
   "dependencies": {
-    "ace-builds": "^1.10.1",
     "angular": "~1.8.3",
     "angular-local-storage": "~0.7.1",
     "angular-sanitize": "~1.8.3",
-    "angular-ui-ace": "0.2.3",
     "angular-ui-bootstrap": "~2.5.0",
     "bootstrap": "~3.4.1",
     "es5-shim": "~4.6.7",
@@ -19,7 +17,9 @@
     "splainer-search": "2.20.1"
   },
   "devDependencies": {
+    "ace-builds": "^1.10.1",
     "angular-mocks": "^1.8.3",
+    "angular-ui-ace": "0.2.3",
     "autoprefixer": "^9.8.8",
     "grunt": "^1.5.3",
     "grunt-concurrent": "^3.0.0",

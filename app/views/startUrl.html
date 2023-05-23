@@ -5,8 +5,6 @@
       <div class="tabbable tabs-below">
         <ul class="nav nav-tabs">
           <li class="active"><a href="#solr_"data-toggle="tab">Solr</a></li>
-          <li><a href="#es_" data-toggle="tab">Elasticsearch</a></li>
-          <li><a href="#os_" data-toggle="tab">OpenSearch</a></li>
         </ul>
 
         <div class="tab-content">
@@ -18,61 +16,6 @@
                 <button class="btn btn-primary" type="submit" dispatch-on-click="openEast" ng-click="start.submitSolr()">Splain This!</button>
               </span>
             </div>
-          </div>
-
-          <div class="tab-pane" id="es_">
-            <div class="input-group">
-              <input type="text" class="form-control" ng-model="start.esSettings.startUrl" ng-init="start.esSettings.startUrl='http://quepid-elasticsearch.dev.o19s.com:9206/tmdb/_search'">
-              <span class="input-group-btn">
-                <button class="btn btn-primary" type="submit" dispatch-on-click="openEast" ng-click="start.submitEs()">Splain This!</button>
-              </span>
-            </div>
-
-            <p>
-              <button type="button" class="btn btn-sm btn-default" ng-click="isHeaderConfigCollapsed = !isHeaderConfigCollapsed">Advanced Settings</button>
-            </p>
-            <div uib-collapse="!isHeaderConfigCollapsed">
-              <custom-headers settings="start.esSettings"></custom-headers>
-            </div>
-
-            <div style="height: 300px; margin-top: 20px;" ui-ace="{
-                require: ['ace/ext/language_tools'],
-                useWrapMode: false,
-                tabSize: 2,
-                useSoftTabs: true,
-                mode: 'json'
-              }"
-              ng-model="start.esSettings.searchArgsStr">
-            </div>
-            <a href="" class="label label-default" ng-click="start.autoIndent()">Indent JSON</a>
-          </div>
-
-          <div class="tab-pane" id="os_">
-            <div class="input-group">
-              <input type="text" class="form-control" ng-model="start.osSettings.startUrl" ng-init="start.osSettings.startUrl='https://reader:reader@quepid-opensearch.dev.o19s.com:9000/tmdb/_search'">
-              <span class="input-group-btn">
-                <button class="btn btn-primary" type="submit" dispatch-on-click="openEast" ng-click="start.submitOs()">Splain This!</button>
-              </span>
-            </div>
-
-            <p>
-              <button type="button" class="btn btn-sm btn-default" ng-click="isHeaderConfigCollapsed = !isHeaderConfigCollapsed">Advanced Settings</button>
-            </p>
-            <div uib-collapse="!isHeaderConfigCollapsed">
-              <custom-headers settings="start.osSettings"></custom-headers>
-            </div>
-
-
-            <div style="height: 300px; margin-top: 20px;" ui-ace="{
-                require: ['ace/ext/language_tools'],
-                useWrapMode: false,
-                tabSize: 2,
-                useSoftTabs: true,
-                mode: 'json'
-              }"
-                 ng-model="start.osSettings.searchArgsStr">
-            </div>
-            <a href="" class="label label-default" ng-click="start.autoIndent()">Indent JSON</a>
           </div>
 
         </div>
