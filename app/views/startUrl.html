@@ -11,7 +11,7 @@
 
           <div class="tab-pane active" id="solr_">
             <div class="input-group">
-              <input type="text" class="form-control" ng-model="start.solrSettings.startUrl" ng-init="start.solrSettings.startUrl='http://quepid-solr.dev.o19s.com:8985/solr/tmdb/select?q=*:*'">
+              <input type="text" class="form-control" ng-model="start.solrSettings.startUrl" ng-init="start.solrSettings.startUrl=start.defaultUrl">
               <span class="input-group-btn">
                 <button class="btn btn-primary" type="submit" dispatch-on-click="openEast" ng-click="start.submitSolr()">Splain This!</button>
               </span>
