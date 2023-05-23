@@ -2,7 +2,7 @@
 
 This is a version of [Splainer](http://github.com/o19s/splainer) that allows running via Solr Admin UI.
 
-<img width="604" alt="image" src="https://github.com/softwaredoug/solr-splainer/assets/629060/7b47d8fa-3d66-44b4-a017-ebf69003a5a6">
+<img width="395" alt="image" src="https://github.com/softwaredoug/solr-splainer/assets/629060/5aac89f7-d37a-48c9-9416-533fe22ec88b">
 
 ## Building and installation
 
