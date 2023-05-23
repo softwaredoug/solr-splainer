@@ -12,3 +12,4 @@ deploy.sh
 *.swp
 
 docker-compose.override.yml
+splainer.zip
