@@ -92,7 +92,7 @@ describe('searchResultsCtrl', function() {
   });
 
   it('goes to WAITING_FOR_SERACH -> DID_SEARCH on search execute', function() {
-    httpBackend.expectJSONP(urlContainsParams(testUrl, {q: ['*:*']}))
+    httpBackend.expectGET(urlContainsParams(testUrl, {q: ['*:*']}))
                .respond(200, mockSolrResp);
     createController();
     scope.search.search();
@@ -103,7 +103,7 @@ describe('searchResultsCtrl', function() {
   });
 
   it('goes to WAITING_FOR_SEARCH -> ERROR on seasrch fail', function() {
-    httpBackend.expectJSONP(urlContainsParams(testUrl, {q: ['*:*']}))
+    httpBackend.expectGET(urlContainsParams(testUrl, {q: ['*:*']}))
                .respond(404);
     createController();
     scope.search.search();
@@ -114,7 +114,7 @@ describe('searchResultsCtrl', function() {
   });
 
   it('gets a list of docs', function() {
-    httpBackend.expectJSONP(urlContainsParams(testUrl, {q: ['*:*']}))
+    httpBackend.expectGET(urlContainsParams(testUrl, {q: ['*:*']}))
                .respond(200, mockSolrResp);
     createController();
     scope.search.search();
@@ -124,7 +124,7 @@ describe('searchResultsCtrl', function() {
   });
 
   it('tracks max score', function() {
-    httpBackend.expectJSONP(urlContainsParams(testUrl, {q: ['*:*']}))
+    httpBackend.expectGET(urlContainsParams(testUrl, {q: ['*:*']}))
                .respond(200, mockSolrResp);
     createController();
     scope.search.search();
@@ -134,14 +134,14 @@ describe('searchResultsCtrl', function() {
   });
 
   it('resets list of docs on error', function() {
-    httpBackend.expectJSONP(urlContainsParams(testUrl, {q: ['*:*']}))
+    httpBackend.expectGET(urlContainsParams(testUrl, {q: ['*:*']}))
                .respond(200, mockSolrResp);
     createController();
     scope.search.search();
     httpBackend.flush();
     expect(scope.currSearch.docs.length).toEqual(mockSolrResp.response.docs.length);
 
-    httpBackend.expectJSONP(urlContainsParams(testUrl, {q: ['*:*']}))
+    httpBackend.expectGET(urlContainsParams(testUrl, {q: ['*:*']}))
                .respond(404);
     scope.search.search();
     httpBackend.flush();
@@ -150,7 +150,7 @@ describe('searchResultsCtrl', function() {
   });
 
   it('reports errors', function() {
-    httpBackend.expectJSONP(urlContainsParams(testUrl, {q: ['*:*']}))
+    httpBackend.expectGET(urlContainsParams(testUrl, {q: ['*:*']}))
                .respond(-1);
     createController();
     scope.search.search();
