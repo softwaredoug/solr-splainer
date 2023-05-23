@@ -2,6 +2,10 @@
 
 This is a version of [Splainer](http://github.com/o19s/splainer) that allows running via Solr Admin UI.
 
+<img width="604" alt="image" src="https://github.com/softwaredoug/solr-splainer/assets/629060/7b47d8fa-3d66-44b4-a017-ebf69003a5a6">
+
+## Building and installation
+
 With [npm installed](https://www.npmjs.com/)
 
 ```bash
@@ -12,7 +16,7 @@ $ (cd dist && zip -r - *) > splainer.zip
 unzip splainer.zip -d ~/path/to/solr/server/solr-webapp/webapp/splainer
 ```
 
-See [main Splainer project](http://github.com/o19s/splainer) for more project informatio.n
+See [main Splainer project](http://github.com/o19s/splainer) for more project information
 
 ### Changes to make it work in Solr Admin UI
 
