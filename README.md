@@ -12,9 +12,11 @@ $ (cd dist && zip -r - *) > splainer.zip
 unzip splainer.zip -d ~/path/to/solr/server/solr-webapp/webapp/splainer
 ```
 
-See [main Splainer project](http://github.com/o19s/splainer) for more project information
+See [main Splainer project](http://github.com/o19s/splainer) for more project informatio.n
 
 ### Changes to make it work in Solr Admin UI
+
+See [diff from main project](https://github.com/o19s/splainer/compare/main...softwaredoug:solr-splainer:main#diff-18e01ac6a833fb1b20ffbad54f0ad8834a765e766f72cccda1e56cb942864d25R30)
 
 * Changes communication with Solr to use GET instead af JSONP, same way the Admin UI communicates with Solr
 
