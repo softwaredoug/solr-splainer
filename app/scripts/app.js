@@ -14,7 +14,6 @@ angular
     'LocalStorageModule',
     'ui.bootstrap',
     'ngJsonExplorer',
-    'ui.ace',
     'o19s.splainer-search'
   ])
   .config([

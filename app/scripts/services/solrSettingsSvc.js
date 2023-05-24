@@ -17,6 +17,7 @@ angular.module('splain-app')
       if (fl !== null) {
         parsedArgs.fl = fl;
       }
+
       return solrUrlSvc.buildUrl(userSettings.searchUrl, parsedArgs);
     };
 

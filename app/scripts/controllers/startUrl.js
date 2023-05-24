@@ -22,7 +22,7 @@ angular.module('splain-app')
       $scope.start.esSettings = settingsStoreSvc.settings.es;
       $scope.start.osSettings = settingsStoreSvc.settings.os;
       $scope.start.whichEngine = settingsStoreSvc.settings.whichEngine;
-
+      $scope.start.defaultUrl = window.location.origin + "/solr/posts_all/select?q=*:*"
 
 
       var search = function() {
